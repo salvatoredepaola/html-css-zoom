@@ -15,6 +15,7 @@ CSS ELEMENTI GENERICI
 
 .flex{
     display: flex;
+    flex-direction: row;
 }
 
 .wrap{flex-wrap: wrap;}
@@ -23,7 +24,7 @@ CSS ELEMENTI GENERICI
 
 .hMin520{ min-height: 520px;}
 .space {margin: 5px 0px;}
-.col {padding: 30px 0;}
+.col {padding: 10px;}
 .padding-top{padding-top: 180px;}
 .padding-bottom{padding-bottom: 180px;}
 
@@ -38,6 +39,7 @@ CSS ELEMENTI GENERICI
 .space-between {justify-content: space-between;}
 .justify-center {justify-content: center;}
 .justify-content{justify-content: flex-end;}
+.column{flex-direction: column;}
 
 .center{ margin: 0 auto;}
 
@@ -91,13 +93,17 @@ button{
     margin-right: 10px;
 }
 
-main{
-    height: calc(100vh - 80px);
-}
+/* main{
+    min-height: calc(100vh - 80px);
+} */
+
 .MainBox{
+        /* vh al contenuto del main */
     display: flex;
-    margin: 50px auto;
+    margin: 0 auto;
     flex-wrap: wrap;
+    height: calc(100vh- 80px);
+
 }
 
 .cella{
@@ -119,4 +125,31 @@ img{
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+/* FOOTER */
+
+.footer{
+    width: 100%;
+    height: 90px;
+    background-color: #222;
+    font-size: 10px;
+}
+footer i{
+    font-size: 30px;
+    margin-bottom: 10px;
+    
+}
+.arrow{
+    padding: 15px;
+}
+
+.inlineFlex{
+    display: inline-flex;
+    height: 80px;
+}
+
+footer button{
+    color: red;
+    border-radius: 0;
 }
