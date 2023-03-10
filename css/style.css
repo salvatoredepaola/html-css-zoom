@@ -24,8 +24,8 @@ CSS ELEMENTI GENERICI
 
 .hMin520{ min-height: 520px;}
 .space {margin: 5px 0px;}
-.col {padding: 10px;}
-.padding-top{padding-top: 180px;}
+.col {padding: 28px 0;}
+.padding{padding: 1em;}
 .padding-bottom{padding-bottom: 180px;}
 
 /* ALLINEAMENTO */
@@ -48,6 +48,7 @@ CSS ELEMENTI GENERICI
 .bg-orangered {background-color: orangered;}
 .bg-blue {background-color: blue;}
 .bg-black {background-color: #222;}
+.bg-grey{ background-color: #4a4a4a;}
 
 
 /* COORE TESTO */
@@ -56,6 +57,8 @@ CSS ELEMENTI GENERICI
 .text-black{color: black;}
 .text-white{color: white;}
 .text-blue{color: #8ea1e1;}
+.color-green{color: green;}
+.color-red{color: red;}
 
 /* POSIZIONAMENTO */
 
@@ -69,8 +72,13 @@ CSS ELEMENTI GENERICI
 .col60 {width: 60%;}
 .col70 {width: 70%;}
 .col80 {width: 80%;}
-.width400 {width: 400px;}
-.width270 {width: 270px;}
+.col90 {width: 90%;}
+.col100 {width: 100%;}
+
+.w400 {width: 400px;}
+.w270 {width: 270px;}
+
+.h100{height: 100%;}
 
 /* MISC */
 
@@ -84,38 +92,35 @@ body{
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
-button{
+header{
+    height: 40px;
+    text-align: right;
+}
+header > button{
     color: white;
     background-color: #4a4a4a;
     padding: 5px;
     border: none;
-    border-radius: 5px;
-    margin-right: 10px;
+    border-radius: 6px;
+    margin-top: 0.5em;
+    margin-right: 0.5em;
+}
+button:hover{cursor: pointer;}
+
+main{
+    min-height: calc(100vh - 120px);   /* px= somma dell'altezza dell'header e del footer 30px header - 90px footer*/
 }
 
-/* main{
-    min-height: calc(100vh - 80px);
-} */
-
-.MainBox{
-        /* vh al contenuto del main */
-    display: flex;
-    margin: 0 auto;
-    flex-wrap: wrap;
-    height: calc(100vh- 80px);
-
-}
 
 .cella{
+    width: calc(100vw / 7 - 32px);
     position: relative;
-    margin-bottom: 10px;
+    border: 2px solid black;
 }
 
 img{
-
-    display: block;
     position: relative;
-    width: 240px;
+    width: 100%;
     height: 140px;
 }
 
@@ -129,11 +134,14 @@ img{
 
 /* FOOTER */
 
-.footer{
-    width: 100%;
-    height: 90px;
+footer{
+    display: flex;
+    height: 80px;
     background-color: #222;
     font-size: 10px;
+}
+footer div {
+    justify-content: space-between;
 }
 footer i{
     font-size: 30px;
@@ -148,8 +156,7 @@ footer i{
     display: inline-flex;
     height: 80px;
 }
-
-footer button{
-    color: red;
-    border-radius: 0;
+.end{
+    border: none;
+    padding: 0 20px;
 }
